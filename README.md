@@ -83,19 +83,26 @@ The light theme has its own set of variables under `body.light { ... }`.
 
 ### Add project screenshots
 
-Just drop your images into the `screenshots/` folder with the matching filename:
+Each project card expects a specific image filename. Drop your screenshots into `screenshots/` using these exact names:
 
+| Card | Expected filename |
+|------|-------------------|
+| Project One | `screenshots/project-one.jpg` |
+| Project Two | `screenshots/project-two.jpg` |
+| Project Three | `screenshots/project-three.jpg` |
+| Project Four | `screenshots/project-four.jpg` |
+
+No screenshot? No problem --- a fallback icon shows automatically, no broken images.
+
+**Important:** The filenames are defined in the HTML `<img src="...">` tags, not by your project title. If you renamed "Project One" to "Thought Evolution", the expected filename is still `project-one.jpg` unless you also update the `src` attribute in the HTML:
+
+```html
+<!-- Find this line in your card -->
+<img src="screenshots/project-one.jpg" ...>
+
+<!-- Change it to match your file -->
+<img src="screenshots/thought-evolution.jpg" ...>
 ```
-screenshots/
-├── project-one.jpg
-├── project-two.jpg
-├── project-three.jpg
-└── project-four.jpg
-```
-
-That's it. No HTML editing needed. Each card already has an `<img>` tag pointing to the expected filename. If the image exists, it shows up with lightbox support. If not, a fallback icon displays automatically --- no broken images, no manual toggling.
-
-To change the filename convention, edit the `src` attribute in the `<img>` tag inside each card.
 
 ### Add / remove languages
 
@@ -236,17 +243,26 @@ gh repo fork GeraldYa/portfolio-template --clone
 
 ### 添加项目截图
 
-只需将图片放入 `screenshots/` 目录，文件名对应即可：
+每个项目卡片对应一个固定的图片文件名，把截图按以下名称放入 `screenshots/` 即可：
 
-```
-screenshots/
-├── project-one.jpg
-├── project-two.jpg
-├── project-three.jpg
-└── project-four.jpg
-```
+| 卡片 | 对应文件名 |
+|------|-----------|
+| Project One | `screenshots/project-one.jpg` |
+| Project Two | `screenshots/project-two.jpg` |
+| Project Three | `screenshots/project-three.jpg` |
+| Project Four | `screenshots/project-four.jpg` |
 
-不需要改 HTML。每个卡片已经有指向对应文件名的 `<img>` 标签。图片存在就自动显示（带灯箱放大），不存在就自动显示图标——不会出现破图。
+没有截图？没关系——自动显示图标，不会出现破图。
+
+**注意：** 文件名由 HTML 中的 `<img src="...">` 决定，不是由你的项目标题决定。如果你把"Project One"改名为"思维进化"，图片文件名仍然要叫 `project-one.jpg`，除非你同时修改 HTML 中的 src 属性：
+
+```html
+<!-- 找到卡片中的这行 -->
+<img src="screenshots/project-one.jpg" ...>
+
+<!-- 改成你的文件名 -->
+<img src="screenshots/thought-evolution.jpg" ...>
+```
 
 ### 添加语言
 
