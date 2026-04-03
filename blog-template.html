@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Post Title — Your Name</title>
+<meta name="description" content="A brief description of your blog post for search engines and social sharing.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0a0a14; --card: #13132a; --accent: #8b7cf6; --text: #e8e8f0; --muted: #8888a8; --border: #22223a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+  body.light { --bg: #f8f7f4; --card: #fff; --accent: #7c6bdf; --text: #1a1a2e; --muted: #555; --border: #e2e0da; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+  .back { color: var(--accent); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 32px; }
+  .back:hover { text-decoration: underline; }
+  .top-controls { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  .top-btn { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; cursor: pointer; color: var(--muted); font-size: 0.85rem; font-family: inherit; transition: all 0.2s; }
+  .top-btn:hover { border-color: var(--accent); color: var(--accent); }
+  h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 40px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .meta span { display: flex; align-items: center; gap: 4px; }
+  h2 { font-size: 1.4rem; font-weight: 600; margin: 40px 0 16px; color: var(--accent); }
+  h3 { font-size: 1.1rem; font-weight: 600; margin: 28px 0 12px; }
+  p { margin-bottom: 18px; color: var(--text); font-size: 1rem; }
+  .muted { color: var(--muted); }
+  code { font-family: 'JetBrains Mono', monospace; background: var(--card); border: 1px solid var(--border); padding: 2px 6px; border-radius: 4px; font-size: 0.88em; }
+  pre { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; overflow-x: auto; margin-bottom: 18px; }
+  pre code { background: none; border: none; padding: 0; font-size: 0.85rem; line-height: 1.6; }
+  blockquote { border-left: 3px solid var(--accent); padding: 12px 20px; margin: 0 0 18px; background: rgba(139,124,246,0.06); border-radius: 0 8px 8px 0; color: var(--muted); font-style: italic; }
+  ul, ol { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 8px; }
+  .diagram { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 24px 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--muted); line-height: 2; }
+  .highlight { color: var(--accent); font-weight: 600; }
+  .takeaway { background: rgba(139,124,246,0.08); border: 1px solid rgba(139,124,246,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+  .takeaway h3 { margin-top: 0; color: var(--accent); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding-top: 20px; border-top: 1px solid var(--border); }
+  @media (max-width: 600px) { h1 { font-size: 1.6rem; } .container { padding: 24px 16px 60px; } }
+</style>
+</head>
+<body>
+<div class="top-controls"><button class="top-btn" onclick="document.body.classList.toggle('light'); this.textContent = document.body.classList.contains('light') ? 'Dark' : 'Light'">Light</button></div>
+<div class="container">
+<a href="/" class="back">&larr; Back to portfolio</a>
+
+<h1>Your Blog Post Title Goes Here</h1>
+<div class="meta">
+  <span>Your Name</span>
+  <span>Month Year</span>
+  <span>X min read</span>
+</div>
+
+<p>Write your opening paragraph here. This should hook the reader and set up the problem or story you're about to tell. Make it personal and specific.</p>
+
+<h2>The Problem</h2>
+
+<p>Describe the problem you set out to solve, the question you wanted to answer, or the challenge you faced. Be concrete &mdash; readers connect with specific situations, not abstractions.</p>
+
+<p>Add context. Why did this matter to you? What was the status quo before you started?</p>
+
+<h2>Your Approach</h2>
+
+<h3>Decision One</h3>
+
+<p>Explain a key decision you made. What options did you consider?</p>
+<ul>
+  <li><strong>Option A</strong> &mdash; Pros and cons of the first approach.</li>
+  <li><strong>Option B</strong> &mdash; Pros and cons of the second approach.</li>
+  <li><strong>Option C</strong> &mdash; Why you chose this one.</li>
+</ul>
+
+<h3>Architecture / Design</h3>
+
+<p>Describe the high-level structure of what you built.</p>
+
+<div class="diagram">
+  Component A<br>
+  &darr; &uarr;<br>
+  Component B<br>
+  &darr; &uarr;<br>
+  Component C<br>
+  &darr;<br>
+  Infrastructure / Deployment
+</div>
+
+<h3>Decision Two</h3>
+
+<p>Walk through another important choice. Show your reasoning process.</p>
+
+<blockquote>
+  A relevant quote, insight, or principle that guided your thinking.
+</blockquote>
+
+<h2>Implementation</h2>
+
+<p>Go deeper into the technical details. Show code snippets where relevant:</p>
+
+<pre><code>// Example code snippet
+function solve(problem) {
+  const approach = analyze(problem);
+  return implement(approach);
+}</code></pre>
+
+<p>Explain what the code does and why it matters. Don't just show code &mdash; tell the story around it.</p>
+
+<h2>Results</h2>
+
+<p>What happened? Share outcomes, metrics, or qualitative results. Be honest about what worked and what didn't.</p>
+
+<div class="takeaway">
+  <h3>Key Takeaways</h3>
+  <ul>
+    <li><strong>Lesson one</strong> &mdash; What you'd do the same way again.</li>
+    <li><strong>Lesson two</strong> &mdash; What you'd do differently next time.</li>
+    <li><strong>Lesson three</strong> &mdash; The unexpected insight you gained.</li>
+  </ul>
+</div>
+
+<h2>What's Next</h2>
+
+<p>Where does this go from here? What are you planning to improve, explore, or build on top of this work?</p>
+
+<hr>
+
+<p class="muted">Thanks for reading. If you have questions or want to discuss this further, feel free to <a href="mailto:your@email.com" style="color: var(--accent);">reach out</a> or connect on <a href="https://github.com/yourusername" style="color: var(--accent);">GitHub</a>.</p>
+
+<footer>
+  <p>&copy; 2026 Your Name</p>
+</footer>
+</div>
+</body>
+</html>
