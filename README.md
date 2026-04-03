@@ -83,18 +83,19 @@ The light theme has its own set of variables under `body.light { ... }`.
 
 ### Add project screenshots
 
-1. Add images to the `screenshots/` directory
-2. Replace the `<div class="card-icon">` with an `<img>` tag:
+Just drop your images into the `screenshots/` folder with the matching filename:
 
-```html
-<!-- Before (icon) -->
-<div class="card-icon">&#128640;</div>
-
-<!-- After (screenshot) -->
-<img src="screenshots/my-project.jpg" alt="My Project" class="card-img">
+```
+screenshots/
+├── project-one.jpg
+├── project-two.jpg
+├── project-three.jpg
+└── project-four.jpg
 ```
 
-The lightbox will automatically work for any `.card-img` element.
+That's it. No HTML editing needed. Each card already has an `<img>` tag pointing to the expected filename. If the image exists, it shows up with lightbox support. If not, a fallback icon displays automatically --- no broken images, no manual toggling.
+
+To change the filename convention, edit the `src` attribute in the `<img>` tag inside each card.
 
 ### Add / remove languages
 
@@ -235,16 +236,17 @@ gh repo fork GeraldYa/portfolio-template --clone
 
 ### 添加项目截图
 
-1. 将图片放入 `screenshots/` 目录
-2. 将 `<div class="card-icon">` 替换为 `<img>` 标签：
+只需将图片放入 `screenshots/` 目录，文件名对应即可：
 
-```html
-<!-- 替换前（图标） -->
-<div class="card-icon">&#128640;</div>
-
-<!-- 替换后（截图） -->
-<img src="screenshots/my-project.jpg" alt="项目名" class="card-img">
 ```
+screenshots/
+├── project-one.jpg
+├── project-two.jpg
+├── project-three.jpg
+└── project-four.jpg
+```
+
+不需要改 HTML。每个卡片已经有指向对应文件名的 `<img>` 标签。图片存在就自动显示（带灯箱放大），不存在就自动显示图标——不会出现破图。
 
 ### 添加语言
 
